@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "react_nav",
+    "slug": "react_nav",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "react_nav"
+}
