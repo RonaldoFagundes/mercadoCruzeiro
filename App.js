@@ -9,11 +9,9 @@ import Home from './src/componentes/Home';
 import Login from './src/componentes/Login';
 import Produtos from './src/componentes/Produtos';
 import Promocao from './src/componentes/Promocao';
+import Mapa from './src/componentes/Mapa';
 
 const Drawer = createDrawerNavigator();
-
-
-
  
 export default function App() {
   return (
@@ -26,9 +24,8 @@ export default function App() {
            <Drawer.Screen name='Login'  component={Login}/>  
            <Drawer.Screen name='Produtos'  component={Produtos}/>  
            <Drawer.Screen name='Promocao'  component={Promocao}/>  
-       
+           <Drawer.Screen name='Mapa' component={Mapa}/>       
        </Drawer.Navigator>
-
      </NavigationContainer>
 
 

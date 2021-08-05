@@ -7,8 +7,10 @@ export default function Produtos  ({navigation}){
 
   return(
     <View style={{flex:1,alignItems:'center' ,justifyContent:'center'}}>
-      <Text>Tela - Produtos</Text>
-      <Button title=" Abrir menu lateral " onPress={() => navigation.openDrawer()}/>
+        <Button title=" Abrir menu lateral " onPress={() => navigation.openDrawer()}/>
+      <Text>Bem-Vindos ao Mercado Cruzeiro Frios</Text>
+
+     
     </View>
 );
 
