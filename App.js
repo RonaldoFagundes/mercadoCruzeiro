@@ -30,7 +30,7 @@ export default function App() {
        </Drawer.Navigator>
 
      </NavigationContainer>
-//teste do stes
+
 
   );
 }
