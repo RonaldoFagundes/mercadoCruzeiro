@@ -1,21 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer  } from '@react-navigation/native';
+import 'react-native-gesture-handler';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import Ionicons from "react-native-vector-icons/Ionicons";
 
+import Home from './src/componentes/Home';
+import Login from './src/componentes/Login';
+import Produtos from './src/componentes/Produtos';
+import Promocao from './src/componentes/Promocao';
+
+const Drawer = createDrawerNavigator();
+
+
+
+ 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+     <NavigationContainer>                  
+       <StatusBar/>
+
+       <Drawer.Navigator initialRouteName='Home'>
+           <Drawer.Screen name='Home'  component={Home}/>       
+           <Drawer.Screen name='Login'  component={Login}/>  
+           <Drawer.Screen name='Produtos'  component={Produtos}/>  
+           <Drawer.Screen name='Promocao'  component={Promocao}/>  
+       
+       </Drawer.Navigator>
+
+     </NavigationContainer>
+
+
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
