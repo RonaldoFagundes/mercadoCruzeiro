@@ -1,10 +1,16 @@
-import { StyleSheet, View, Text, Dimensions } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text, Dimensions,Button } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-import customStyle from './customStyle';
+import customStyle from '../../customStyle'; '../../customStyle'
 
-export default function Mapa() {
+export default function Mapa({ navigation }) {
     return (
         <View style={styles.container}>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Text>Tela - Mapa</Text>
+                <Button title=" Abrir menu lateral " onPress={() => navigation.openDrawer()} />
+            </View>
+
             <MapView
                 customMapStyle={customStyle}
                 style={styles.mapStyle}
@@ -26,6 +32,7 @@ export default function Mapa() {
 
                 />
             </MapView>
+            <Text>Localização - Cruzeiro Frios</Text>
         </View>
     );
 }
